@@ -8,7 +8,7 @@
 
     <script type="text/javascript">
     function carregarLista(){
-        <g:remoteFunction controller="produto" action="lista" update="diviLista" />
+        <g:remoteFunction controller="produto" action="lista" update="divLista" />
     }
 
     </script>
@@ -18,8 +18,8 @@
 <body>
 
 <g:remoteLink controller="produto" action="adicionar" update="divForm">Adicionar</g:remoteLink>
-<div id="diviLista">
-    <g:render template="lista" model="[produtos: produtos]"/>
+<div id="divLista">
+    <g:render template="lista" model="[produtos: produtos]" />
 </div>
 
 <div id="divForm"></div>

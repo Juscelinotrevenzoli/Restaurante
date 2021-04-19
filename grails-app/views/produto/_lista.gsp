@@ -15,8 +15,7 @@
                 <td>${produto.estoque?.quantidade}</td>
                 <td>${produto.estoque?.quantidadeMinima}</td>
                 <td>
-                    <g:remoteLink controller="produto" action="alterar" update="diviForm"
-                                  id="${produto.id}">Alterar</g:remoteLink>&nbsp;
+                    <g:remoteLink controller="produto" action="alterar" update="divForm" id="${produto.id}">Alterar</g:remoteLink>&nbsp;
                     <a href="#">Excluir</a>
                 </td>
             </tr>
