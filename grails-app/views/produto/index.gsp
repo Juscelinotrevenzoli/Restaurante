@@ -10,6 +10,11 @@
     function carregarLista(){
         <g:remoteFunction controller="produto" action="lista" update="divLista" />
     }
+    function excluir(id){
+        if(confirm("Deseja realmente excluir?")){
+            <g:remoteFunction controller="produto" action="excluir" update="divLista" id="id" />
+        }
+    }
 
     </script>
 

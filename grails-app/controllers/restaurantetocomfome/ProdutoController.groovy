@@ -28,7 +28,14 @@ class ProdutoController {
     }
 
     def salvar (){
-        Produto produto= new Produto()
+        Produto produto
+        if(params.id){
+            produto = Produto.get(params.id)
+        }else {
+            produto = new Produto()
+            produto.estoque = new Estoque()
+        }
+
         produto.nome = params.nome
         produto.preco = params.preco.toDouble()
         produto.estoque = new Estoque()
