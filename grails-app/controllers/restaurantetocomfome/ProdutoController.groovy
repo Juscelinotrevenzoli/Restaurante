@@ -50,4 +50,13 @@ class ProdutoController {
             render("ops...deu pau!")
         }
     }
+
+    def excluir(){
+        Produto produto = Produto.get(params.id)
+        produto.delete(flush: true)
+        def lista = Produto.list()
+        render(template: "/produto/lista", model: [produtos: lista])
+    }
+
+
 }

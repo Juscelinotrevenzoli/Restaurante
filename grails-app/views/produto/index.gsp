@@ -12,8 +12,14 @@
     }
     function excluir(id){
         if(confirm("Deseja realmente excluir?")){
+
             <g:remoteFunction controller="produto" action="excluir" update="divLista" id="id" />
+
+
         }
+    }
+    function cancelar(){
+        jQuery("#divForm").html("")
     }
 
     </script>
